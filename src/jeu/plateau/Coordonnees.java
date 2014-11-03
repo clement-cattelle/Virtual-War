@@ -1,3 +1,4 @@
+package jeu.plateau;
 public class Coordonnees {
 	private int largeur,hauteur;
 	

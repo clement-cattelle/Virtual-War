@@ -1,3 +1,6 @@
+package jeu.plateau;
+import jeu.entite.Robot;
+
 public abstract class Cellule {
 	protected int mine=0;
 	protected int base=0;

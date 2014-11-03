@@ -1,3 +1,7 @@
+package jeu.action;
+import jeu.entite.Robot;
+import jeu.plateau.Coordonnees;
+
 public abstract class Action {
 	private Coordonnees coord;
 	private Robot robot;

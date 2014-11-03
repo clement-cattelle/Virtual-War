@@ -1,3 +1,5 @@
+package jeu.plateau;
+
 public class Plateau {
 	int hauteur,largeur;
 	Cellule[][] plateau;

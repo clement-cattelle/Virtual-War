@@ -1,3 +1,6 @@
+package jeu.plateau;
+import jeu.entite.Robot;
+
 public class Case extends Cellule{
 	
 	/**
@@ -33,4 +36,7 @@ public class Case extends Cellule{
 		this.videMine();
 	}
 	
+	public String toString(){
+		return super.toString();
+	}
 }

@@ -1,4 +1,8 @@
+package jeu.entite;
 import java.util.List;
+
+import jeu.plateau.Coordonnees;
+import jeu.plateau.Vue;
 
  
 public abstract class Robot {

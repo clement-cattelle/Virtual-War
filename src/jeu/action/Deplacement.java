@@ -1,3 +1,7 @@
+package jeu.action;
+import jeu.entite.Robot;
+import jeu.plateau.Coordonnees;
+
 public class Deplacement extends Action{
 
 	/**
