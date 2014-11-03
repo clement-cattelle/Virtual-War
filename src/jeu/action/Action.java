@@ -7,6 +7,16 @@ public abstract class Action {
 	private Robot robot;
 	
 	/**
+	 * Cree une action avec :
+	 * @param robot qui effectue l'action
+	 * @param direction
+	 */
+	public Action(Robot robot,Coordonnees direction){
+		this.robot=robot;
+		this.coord=coord;
+	}
+	
+	/**
      * renvoie le robot qui execute l'action
      * @return Robot
      */
@@ -23,11 +33,9 @@ public abstract class Action {
 	}
 	
 	public Coordonnees getObjectif(){
+		return null;
 		
 	}
-	public Action(Robot robot,Coordonnees direction){
-		this.robot=robot;
-		this.coord=coord;
-	}
+	
 	abstract void agit();
 }
