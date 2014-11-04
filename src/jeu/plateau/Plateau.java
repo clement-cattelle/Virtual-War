@@ -1,4 +1,4 @@
-package Jeu.plateau;
+package jeu.plateau;
 
 public class Plateau {
 	int hauteur,largeur;
