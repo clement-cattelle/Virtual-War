@@ -1,4 +1,4 @@
-package src.jeu;
+package jeu;
 public class Constante {
 
 }

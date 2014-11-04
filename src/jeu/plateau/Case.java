@@ -1,4 +1,5 @@
 package jeu.plateau;
+
 import jeu.entite.Robot;
 
 public class Case extends Cellule{
