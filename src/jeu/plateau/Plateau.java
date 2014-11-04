@@ -1,4 +1,4 @@
-package jeu.plateau;
+package Jeu.plateau;
 
 public class Plateau {
 	int hauteur,largeur;
@@ -40,8 +40,10 @@ public class Plateau {
 	                str = ""; 
 	                
 	                if (i==0 && j==0){
-	                	str += "B";
-	                }	
+	                	str += "   | B |";
+	                } else if(j == largeur-1 && i != 0) {
+	                	str += "   |   | " + i;
+	                }
 	                else { 
 	                    str += "   |"; 
 	                } 
