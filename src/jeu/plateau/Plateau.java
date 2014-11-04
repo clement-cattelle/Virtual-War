@@ -93,5 +93,6 @@ public class Plateau {
 	public static void main(String[] args){
 		Plateau p=new Plateau();
 		p.afficherPlateau();
+		
 	}
 }
