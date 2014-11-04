@@ -1,4 +1,6 @@
-package jeu.plateau;
+package Jeu.plateau;
+
+import Jeu.entite.Robot;
 
 public class Plateau {
 	int hauteur,largeur;
@@ -36,13 +38,19 @@ public class Plateau {
 	        
 	        for (int i=0;i<hauteur;i++) { 
 	            for (int j=0; j<largeur;j++) { 
-	                cel = plateau[i][j]; 
+	                //cel = plateau[i][j]; 
 	                str = ""; 
-	                
 	                if (i==0 && j==0){
-	                	str += "   | B |";
+	                	plateau[i][j] = new Base(i, j);
+	                	plateau[i][j].ajoute(1);
+	                	System.out.print(plateau[i][j]);
+	                } else if(i == hauteur-1 && j == largeur-1) {
+	                	plateau[i][j] = new Base(i,j);
+	                	plateau[i][j].ajoute(2);
+	                	System.out.print(plateau[i][j]);
 	                } else if(j == largeur-1 && i != 0) {
-	                	str += "   |   | " + i;
+	                	str += "   |   | ";
+	                	plateau[i][j] = new Case(i, j);
 	                }
 	                else { 
 	                    str += "   |"; 
@@ -76,6 +84,11 @@ public class Plateau {
 	 */
 	public int getLargeur() {
 		return largeur;
+	}
+	
+	public void addRobot(Robot r,int equipe) {
+		r.setCoordonnees(new Coordonnees(0,0));
+		
 	}
 	public static void main(String[] args){
 		Plateau p=new Plateau();
