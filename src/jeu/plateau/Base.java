@@ -1,12 +1,19 @@
-package jeu.plateau;
+package Jeu.plateau;
+import java.util.ArrayList;
 
-import jeu.entite.Robot;
+import Jeu.entite.Robot;
 
 public class Base extends Cellule{
+	
+	private ArrayList<Robot>list;
 
 	public Base(int largeur, int hauteur) {
 		super(largeur, hauteur);
-
+		this.list = new ArrayList<Robot>();
+	}
+	
+	public void ajoutRobot(Robot r) {
+		list.add(r);
 	}
 
 	public void deplaceSur(Robot robot) {
@@ -16,12 +23,10 @@ public class Base extends Cellule{
 	public void ajoute(int equipe) {
 		if(equipe ==1 || equipe == 2){
 			this.setBase(equipe);
-
 			if(equipe==1){
-				this.setImage("B");
-			}
-			else{
-				this.setImage("b");
+				this.setImage("   | B |");
+			} else {
+				this.setImage("   | b |");
 			}
 		}
 	}
@@ -32,7 +37,9 @@ public class Base extends Cellule{
 	public void videCase() {
 		this.videContenu();
 		this.videMine();
-
 	}
-
+	
+	public String toString() {
+		return super.toString();
+	}
 }
