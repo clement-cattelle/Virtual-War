@@ -27,7 +27,7 @@ public abstract class Cellule {
 	public int contientMine(){
 		return mine;
 	}
-	
+
 	/**
 	 * Pose une mine sur la cellule
 	 * @param numero de l'equipe ayant pose la mine
@@ -35,10 +35,19 @@ public abstract class Cellule {
 	public void poseMine(int equipe) {
 		this.mine = mine;
 	}
+
+	/**
+	 * 
+	 * @return l'image de la cellule
+	 */
 	public String getImage() {
 		return image;
 	}
 
+	/**
+	 * 
+	 * @param image, l'image qui va etre affectee a la cellule	
+	 */
 	public void setImage(String image) {
 		this.image = image;
 	}
@@ -58,12 +67,12 @@ public abstract class Cellule {
 	public int estBase(){
 		return base;
 	}
+
 	/**
 	 * 
 	 * @return Coordonnees
 	 * retourne la coordonnee correspondant a la largeur & a la hauteur de la cellule
 	 */
-
 	public Coordonnees getCoordonnees(){
 		return new Coordonnees(largeur,hauteur);
 	}
@@ -76,6 +85,7 @@ public abstract class Cellule {
 	public Robot getContenu(){
 		return r;
 	}
+
 	/**
 	 * 
 	 * @return la largeur de la cellule
@@ -83,8 +93,10 @@ public abstract class Cellule {
 	public int getLargeur() {
 		return largeur;
 	}
+
 	/**
 	 * 
+
 	 * @return la hauteur de la cellule
 	 */
 	public int getHauteur() {
@@ -96,11 +108,23 @@ public abstract class Cellule {
 	 * 
 	 */
 	public void videContenu(){
-		if(this.getContenu() != null){
-			this.r=null;
-		}
+		this.r=null;
+		this.mine=0;
 	}
+	
 	/**
+	 * 
+	 * @return true si la cellule contient un robot ou une mine, sinon false
+	 */
+	public boolean estVide(){
+		if(this.getContenu().equals(null) && this.contientMine()==0){
+			return true;
+		}
+		else return false;
+	}
+
+	/**
+
 	 * enleve la mine de la cellule
 	 */
 	public void videMine(){
@@ -115,6 +139,9 @@ public abstract class Cellule {
 	public String toString(){
 		return this.image;
 	}
+	
+	
+	
 	abstract void deplaceSur(Robot robot);
 	abstract void ajoute(int equipe);
 	abstract void videCase();
