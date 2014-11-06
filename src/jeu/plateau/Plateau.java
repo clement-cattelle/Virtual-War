@@ -19,25 +19,22 @@ public class Plateau {
 		plateau=new Cellule[hauteur][largeur];
 	}
 	
-	public Cellule getCellule(int x,int y){
-		return plateau[x][y];
-	}
+	
 	public void poserMine(int x,int y){
-		if(plateau[x][y].estVide()){
+		/*if(/*plateau[x][y].getContenu().equals(null) && plateau[x][y].contientMine()==0){
 			plateau[x][y].poseMine(1);
-		}
+		}*/
+		//if(plateau[x][y].equals(null)) System.out.println("toto");
+		System.out.println(plateau[x][y].getContenu());
 	}
 	
-	public boolean estVide(int x,int y){
-		return plateau[x][y].estVide();
-	}
+	
 	
 	/**
 	 * Affiche le plateau avec son contenu
 	 */
 	public void afficherPlateau() {	
-		 	String str; 
-	        Cellule cel; 
+		 	String str;
 	        // v  On cree le haut du plateau , avec l'affichage des coordonnees en largeur 
 	        System.out.print("    "); 
 	        for (int i = 0; i < this.largeur; i++) { 
