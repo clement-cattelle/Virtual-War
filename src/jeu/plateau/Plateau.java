@@ -1,6 +1,11 @@
-package Jeu.plateau;
 
-import Jeu.entite.Robot;
+package jeu.plateau;
+
+
+
+import jeu.entite.Robot;
+import jeu.entite.Tireur;
+
 
 public class Plateau {
 	int hauteur,largeur;
@@ -12,6 +17,19 @@ public class Plateau {
 		this.hauteur=10;
 		this.largeur=5;
 		plateau=new Cellule[hauteur][largeur];
+	}
+	
+	public Cellule getCellule(int x,int y){
+		return plateau[x][y];
+	}
+	public void poserMine(int x,int y){
+		if(plateau[x][y].estVide()){
+			plateau[x][y].poseMine(1);
+		}
+	}
+	
+	public boolean estVide(int x,int y){
+		return plateau[x][y].estVide();
 	}
 	
 	/**
@@ -47,7 +65,10 @@ public class Plateau {
 	                } else if(i == hauteur-1 && j == largeur-1) {
 	                	plateau[i][j] = new Base(i,j);
 	                	plateau[i][j].ajoute(2);
-	                	System.out.print(plateau[i][j]);
+	                	/*if(plateau[i][j].getContenu().getType().equals("Tireur")){
+	                		System.out.println(plateau[i][j].getContenu());
+	                	}*/
+	                	 System.out.print(plateau[i][j]);
 	                } else if(j == largeur-1 && i != 0) {
 	                	str += "   |   | ";
 	                	plateau[i][j] = new Case(i, j);
@@ -92,6 +113,12 @@ public class Plateau {
 	}
 	public static void main(String[] args){
 		Plateau p=new Plateau();
+		//p.afficherPlateau();
+		Vue v1=new Vue(1,p);
+		Tireur t=new Tireur(v1, 3, 5, 1);
+		p.addRobot(t, 1);
+		t.setCoordonnees(new Coordonnees(5,3));
+		p.poserMine(3, 3);
 		p.afficherPlateau();
 		
 	}
