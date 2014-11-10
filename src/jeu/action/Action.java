@@ -4,8 +4,8 @@ import jeu.entite.Robot;
 import jeu.plateau.Coordonnees;
 
 public abstract class Action {
-	private Coordonnees coord;
-	private Robot robot;
+	protected Coordonnees coord;
+	protected Robot robot;
 	
 	/**
 	 * Cree une action avec :
@@ -14,7 +14,7 @@ public abstract class Action {
 	 */
 	public Action(Robot robot,Coordonnees direction){
 		this.robot=robot;
-		this.coord=coord;
+		this.coord=direction;
 	}
 	
 	/**
@@ -38,5 +38,5 @@ public abstract class Action {
 		
 	}
 	
-	abstract void agit();
+	public abstract void agit();
 }
