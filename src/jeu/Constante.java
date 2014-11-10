@@ -12,6 +12,10 @@ public class Constante {
 	public static Coordonnees BAS = new Coordonnees(0,1);
 	public static Coordonnees GAUCHE = new Coordonnees(-1, 0);
 	public static Coordonnees DROITE = new Coordonnees(1,0);
+	public static Coordonnees HAUT_GAUCHE = new Coordonnees(-1,-1);
+	public static Coordonnees HAUT_DROIT = new Coordonnees(1,-1);
+	public static Coordonnees BAS_GAUCHE = new Coordonnees(-1,1);
+	public static Coordonnees BAS_DROIT = new Coordonnees(1,1);
 	
 	public static List<Coordonnees> liste = new ArrayList<Coordonnees>();
 	static{
