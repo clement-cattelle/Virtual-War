@@ -14,7 +14,7 @@ public class Char extends Robot{
 
 	
 	public boolean peutTirer() {
-		
+		return this.getEnergie()>this.getCoutAction();
 	}
 
 	
