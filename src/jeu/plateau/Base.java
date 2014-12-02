@@ -1,7 +1,7 @@
-package Jeu.plateau;
+package jeu.plateau;
 import java.util.ArrayList;
 
-import Jeu.entite.Robot;
+import jeu.entite.Robot;
 
 public class Base extends Cellule{
 	
