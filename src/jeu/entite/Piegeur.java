@@ -24,8 +24,7 @@ public class Piegeur extends Robot{
 	 * 
 	 */
 	public boolean peutTirer() {
-		
-		return false;
+		return this.getEnergie()>this.getCoutAction();
 	}
 
 	/**
