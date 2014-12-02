@@ -16,7 +16,6 @@ public class Tireur extends Robot{
 	 * @return true si le robot peut tirer ,sinon false
 	 */
 	public boolean peutTirer() {
-		return false;
 	}
 
 	/**
